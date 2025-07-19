@@ -50,7 +50,7 @@ $$h_\theta(x) = \theta_0 + \theta_1 x_1 + \theta_2 x_2 + \theta_3 x_3$$
 
 #### b) La Función de Coste: Midiendo el Error
 Para saber qué tan bueno es nuestro modelo, medimos la diferencia entre el precio predicho $h_\theta(x^{(i)})$ y el precio real $y^{(i)}$ para cada casa $i$. Usamos el **Error Cuadrático Medio (MSE)**, que se define en nuestra función de coste $J(\theta)$:
-$$ J(\theta) = \frac{1}{2m} \sum_{i=1}^{m} (h_\theta(x^{(i)}) - y^{(i)})^2 $$
+$$J(\theta) = \frac{1}{2m} \sum_{i=1}^{m} (h_\theta(x^{(i)}) - y^{(i)})^2$$
 - **$(h_\theta(x^{(i)}) - y^{(i)})^2$**: Elevamos al cuadrado la diferencia para que los errores sean siempre positivos y para penalizar más los errores grandes.
 - **$\sum_{i=1}^{m}$**: Sumamos los errores de todas las casas de nuestros datos.
 - **$\frac{1}{m}$**: Dividimos por el número de casas ($m=5$) para obtener el error promedio.
@@ -58,11 +58,11 @@ $$ J(\theta) = \frac{1}{2m} \sum_{i=1}^{m} (h_\theta(x^{(i)}) - y^{(i)})^2 $$
 
 #### c) El Gradiente: La Derivada de la Función de Coste
 Para minimizar $J(\theta)$, necesitamos su gradiente. Calculemos la derivada parcial con respecto a un parámetro, por ejemplo $\theta_1$, usando la regla de la cadena:
-$$ \frac{\partial J}{\partial \theta_1} = \frac{\partial}{\partial \theta_1} \left[ \frac{1}{2m} \sum_{i=1}^{m} (\theta_0 + \theta_1 x_1^{(i)} + \dots - y^{(i)})^2 \right] $$
-$$ = \frac{1}{2m} \sum_{i=1}^{m} 2 \cdot (\theta_0 + \theta_1 x_1^{(i)} + \dots - y^{(i)}) \cdot \frac{\partial}{\partial \theta_1}(\theta_0 + \theta_1 x_1^{(i)} + \dots - y^{(i)}) $$
-$$ = \frac{1}{m} \sum_{i=1}^{m} (h_\theta(x^{(i)}) - y^{(i)}) \cdot x_1^{(i)} $$
+$$\frac{\partial J}{\partial \theta_1} = \frac{\partial}{\partial \theta_1} \left[ \frac{1}{2m} \sum_{i=1}^{m} (\theta_0 + \theta_1 x_1^{(i)} + \dots - y^{(i)})^2 \right]$$
+$$= \frac{1}{2m} \sum_{i=1}^{m} 2 \cdot (\theta_0 + \theta_1 x_1^{(i)} + \dots - y^{(i)}) \cdot \frac{\partial}{\partial \theta_1}(\theta_0 + \theta_1 x_1^{(i)} + \dots - y^{(i)})$$
+$$= \frac{1}{m} \sum_{i=1}^{m} (h_\theta(x^{(i)}) - y^{(i)}) \cdot x_1^{(i)}$$
 Generalizando para cualquier $\theta_j$:
-$$ \frac{\partial J}{\partial \theta_j} = \frac{1}{m} \sum_{i=1}^{m} (h_\theta(x^{(i)}) - y^{(i)}) x_j^{(i)} $$
+$$\frac{\partial J}{\partial \theta_j} = \frac{1}{m} \sum_{i=1}^{m} (h_\theta(x^{(i)}) - y^{(i)}) x_j^{(i)}$$
 Esta ecuación nos dice cómo cambia el error total cuando cambiamos ligeramente un solo parámetro $\theta_j$.
 
 #### d) El Algoritmo: Descenso de Gradiente
@@ -70,7 +70,7 @@ Este es el proceso iterativo que usa el gradiente para "aprender":
 1.  Empezar con una suposición inicial para los $\theta$ (normalmente, todos cero).
 2.  Calcular el gradiente $\nabla J(\theta)$ en ese punto.
 3.  Actualizar los parámetros dando un pequeño paso en la dirección opuesta al gradiente:
-    $$ \theta_j := \theta_j - \alpha \frac{\partial J}{\partial \theta_j} $$
+    $$\theta_j := \theta_j - \alpha \frac{\partial J}{\partial \theta_j}$$
     - **$\alpha$ (tasa de aprendizaje)**: Es un número pequeño que controla el tamaño del paso que damos. Es crucial: si es muy pequeño, el aprendizaje es lento; si es muy grande, podemos pasarnos del mínimo y diverger.
 4.  Repetir los pasos 2 y 3 miles de veces, o hasta que los parámetros dejen de cambiar significativamente.
 

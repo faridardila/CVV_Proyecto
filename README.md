@@ -45,7 +45,7 @@ Queremos predecir el **precio de una casa ($y$)** en miles de dólares, basándo
 
 #### a) La Hipótesis: Un Modelo Lineal
 Asumimos que la relación entre las características y el precio es lineal. Nuestra función de hipótesis, $h_\theta(x)$, que predice el precio, es:
-$$ h_\theta(x) = \theta_0 + \theta_1 x_1 + \theta_2 x_2 + \theta_3 x_3 $$
+$$h_\theta(x) = \theta_0 + \theta_1 x_1 + \theta_2 x_2 + \theta_3 x_3$$
 - Los **parámetros $\theta_j$** son los "pesos" que el modelo debe aprender. Representan la importancia de cada característica. Por ejemplo, $\theta_1$ nos dirá cuánto aumenta el precio por cada m² adicional. $\theta_0$ es el "precio base" o intercepto.
 
 #### b) La Función de Coste: Midiendo el Error

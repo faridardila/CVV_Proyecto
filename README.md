@@ -38,6 +38,9 @@ Queremos predecir el **precio de una casa ($y$)** en miles de dólares, basándo
 | 4 | 350 | 180 | 3 | 3 |
 | 5 | 200 | 100 | 2 | 12 |
 
+![Datos y Plano de Regresión](graficos/dispersion_3d.png)
+*Visualización del problema. Cada punto rojo es una casa en un espacio 3D definido por dos características (Área y Distancia) y el Precio. El objetivo del modelo es encontrar el plano azul (el modelo de regresión) que mejor se ajuste a través de esta "nube" de datos.*
+
 ### 2.3 Formulación Matemática del Modelo
 
 #### a) La Hipótesis: Un Modelo Lineal

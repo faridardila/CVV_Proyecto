@@ -1,6 +1,6 @@
 # Optimización de Modelos Predictivos mediante Cálculo Multivariado: El Caso de la Regresión Lineal
 
-**Autores:** Deivid Farid Ardila Herrera, Ángel David Beltrán García, Cristofer Damián Camilo Ordóñez Osa
+**Autores:** Deivid Farid Ardila Herrera, Ángel David Beltrán García y Cristofer Damián Camilo Ordóñez Osa
 
 **Curso:** Cálculo en Varias Variables
 
